@@ -1,0 +1,65 @@
+<div th:fragment="html">
+    <script>
+        $(function(){
+            var oid = getUrlParms("oid");
+            var total = getUrlParms("total");
+            var orderid = getUrlParms("orderid");
+            var subject = getUrlParms("subject");
+            var body = getUrlParms("body");
+            var data4Vue = {
+                uri:'forepayed',
+                oid:'',
+                total:'',
+                orderid:'',
+                subject:'',
+                body:''
+            };
+            //ViewModel
+            var vue = new Vue({
+                el: '#workingArea',
+                data: data4Vue,
+                mounted:function(){ //mounted　表示这个 Vue 对象加载成功了
+                    this.oid = oid;
+                    this.total = total;
+                    this.orderid = orderid;
+                    this.subject = subject;
+                    this.body = body;
+                    this.load();
+                },
+                methods: {
+                    load:function(){
+                        var url =  this.uri+"?oid="+oid;
+                        axios.get(url).then(function(response) {
+                            vue.order = response.data;
+                            //location.href="pcpay?out_trade_no="+orderid+"&total_amount="+total+"&subject="+subject+"&body="+body;
+                        });
+                    }
+                }
+            });
+        })
+    </script>
+    <title>毕业设计小站ply -- 确认支付</title>
+    <div class="aliPayPageDiv">
+        <div class="aliPayPageLogo">
+            <!--<img class="pull-left" src="img/site/simpleLogo.png">-->
+            <div style="clear:both"></div>
+        </div>
+
+        <div>
+            <span class="confirmMoneyText">你所购买的商品</span>
+            <span class="confirmMoney">
+            ￥ {{total|formatMoneyFilter}} </span>
+
+        </div>
+        <!--<div>
+            <img class="aliPayImg" src="img/site/alipay2wei.png">
+        </div>-->
+        <div align="center">
+            <h5>点击确认支付为你跳转到支付页面</h5>
+        </div>
+
+        <div>
+            <a :href="'pcpay?out_trade_no='+orderid+'&total_amount='+total+'&subject='+subject+'&body='+body"><button class="confirmPay">确认支付</button></a>
+        </div>
+    </div>
+</div>
