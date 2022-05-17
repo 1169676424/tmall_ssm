@@ -46,7 +46,7 @@ public class OtherInterceptor implements HandlerInterceptor {
 
         httpServletRequest.getServletContext().setAttribute("categories_below_search", cs);
         session.setAttribute("cartTotalItemNumber", cartTotalItemNumber);
-        httpServletRequest.getServletContext().setAttribute("contextPath", "http://tmshop.top/home");
+        httpServletRequest.getServletContext().setAttribute("contextPath", contextPath);
     }
 
     @Override

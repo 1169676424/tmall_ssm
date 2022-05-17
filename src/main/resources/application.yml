@@ -1,14 +1,14 @@
 #支付宝支付参数配置
 alipay:
   #应用ID,您的APPID，收款账号既是您的APPID对应支付宝账号
-  app_id: 2021000119658706
+  app_id:
   #商户私钥，您的PKCS8格式RSA2私钥
-  merchant_private_key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC/jYw+jRcmZImpZ7dSGB0p6wEc6LC8UCjWW7dPNF+ND0gdMgtjxxAKrx4iAlDlMjAwyjM5m9CMEvrldU4pHeh+Qhm0PjvGEkij4qPCbyuv9Z/oHPSQngIi0e2Dly+ve0AN4OFHXLbxTljMXtaPTJzrdy+WfHSoZzHegRhnpIRWM9qCTUV4EJBmRxkznz3VM0T66cxZdrf3fNt2XvWJ75HxlF3vlIE2xrNFMd8VwberhGo+os51ljdhEX9kyrlgL52CmbqgPgc+0OPMsho287FKl18Tt0gbrEi18W02krONFn5CbqQSKanI4NBr0/Sic8yOnZ6/JkZpzWqF6iXvt5G9AgMBAAECggEANnm83rUlVkfVVpYmbnRpJtiskloimQt68atXsHDGk8k6ywLGdnPQPhmbSjS6aNQjHF0EwGdtochsDgGUXuEgk3ec88OXIDdm7SSxScRv+jSya0KA0vf8x4ZIM9o1N4SnrMq9hpv5cxrC6iw2fL5fCh/1KqjuTE48wniYRjFlaVYLY6jaK0B/LLemvEwB0DKHiJ41uaU3Du/5PFcLdJgugvhrB98EF1ASpmQ4hzlmtnYI0WwI/oSfE7DpH25zYRBvNdXq1D4KWGQlgu57HIaC7+VysoEcvs0AaxknJ3OPPFbG4absCdY1HnAYv8FdZTMHnna2YXt9zHBgIhd7KSAsAQKBgQDyHAVaiFN1UP3kbZpUEXJNaqE/ARktXEPiJT5ZPSfR45j3XbzysmEyVplGQ7bWb3ZkSJ3ai5hAUmcazDpqdJJy70YiXg7EF3P7cD4VjXKrXYH5YaWBj0gKVKrJrLkyGvEO0luBDbk/tx9Lh/UCSc7w9BbJK/D2slb/L8PZAtWZgQKBgQDKivqB6hIRJkdtlXDRF9ZJvYgBPw1KKGh37OH64v7QWz6YGHK2SlIxNJtp7337sNmlfb2bAtS1pSaMstTkQhEk4qWH6Ub9LggUTK9hxjBLQbc4JlQLnHAfK/0Rk/n+foIFwHv/NmexZu0SSL3wQDBs7k7WV28Chler8ProLoT+PQKBgAsFGX1IbTwOxq+qCXdAIArECrjabPHynChj95WKQhC8ok7IFnyZf/ERngJjvKPACQyBfaXf6rsqxQSkPRhxW+UdXPzdeSCVzLKqJjlG6exA4lSejDD8e5P0zJ1HXlqYfVZmXsHeBQuQYz1F3/INt/yhr5PSizI/ZdRRsUFkbqKBAoGBALDs9ibF8UJJzdtLz2DXEbkYdtWf3lwJMDiSFFS0NSKMkgEKWioigem5qoi/S62wrm6BiD8AGg8SVLpS/OTnUVKHKVGv1PMUYrpYwlsGZOlYXlQOJxx9avPP2SChwp8soyejHK2zOKEe57gxErnrWGHPSc6yUaZC9BKeTo7DFCmBAoGBAN7i1j/5dUc+0USB9vJ7ZKd1LFDF6Qh3ZGMJNe6+9NVc1AE89yhF5v4jo+bZLww484jYWGMcDp2LJGa6wom1M/K/dr5axsUYa3ZkxRMURiNgWGyyCJiLDVMk7TpyfsX9uyoa/uL9pXCVdH1ZLxghfhwR/Tqu1KeQIyr0rTlkdHgH
-  alipay_public_key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiuedTkfS2uni4fDLiKLlShh83VdOzj8AinwZ5XsHoTEcGzNFl3MgkduSpKa4MquxIZI6vg4TWnje2VskA1ydY2l0r3jOA/0E15/NzCXf5a7byhkpcK+lvf2bqHG62sURsctsjz6oJpaBJkUBCtvWdjLU//QxTmpua9di/4JnTAKjOWS7Tb7k61Sgvhuy9QMndMvEH4+kn5EetuJcrTUthmESPml5KdwA+WbXyZt46f4xfooJbOYV3gAAVt4Nkke88zKrxjpY7SDfs3pR/MSJkVcnc7ijYBRmQkx1eXkyMH+GTzJvbPrmdYrolEmHRAawwE1s/KvcJyTxeQF/ZHNl1QIDAQAB
+  merchant_private_key:
+  alipay_public_key:
   #服务器异步通知页面路径  需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-  notify_url: http://120.79.168.142:8088/notify_url
+  notify_url: http://127.0.0.1:8088/notify_url
   #页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-  return_url: http://tmshop.top/bought
+  return_url: http://127.0.0.1:8088/bought
   #签名方式
   sign_type: RSA2
   #字符编码格式
@@ -23,7 +23,7 @@ spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/tmall_springboot?characterEncoding=UTF-8
     username: root
-    password: root
+    password:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
@@ -44,7 +44,7 @@ spring:
     database: 0
     host: 127.0.0.1
     port: 6379
-    password: ply0407.
+    password:
     pool:
       max-active: 10
       max-idle: 8
