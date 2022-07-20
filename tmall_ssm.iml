@@ -23,6 +23,7 @@
         <datasource-mapping>
           <factory-entry name="entityManagerFactory" />
           <factory-entry name="tmall_springboot" />
+          <factory-entry name="tmall_ssm" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
